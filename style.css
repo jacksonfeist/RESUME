@@ -73,6 +73,12 @@ nav button:hover, nav a button:hover {
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+nav button.active {
+    color: var(--accent);
+    background-color: rgba(100, 255, 218, 0.1);
+    border: 1px solid var(--accent);
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -516,4 +522,260 @@ width: 150px;
 height: 300px;
 width: auto;
 object-fit: cover;
+}
+
+/* Websites Page Styles */
+.page-header {
+    background-color: var(--primary-bg);
+    padding: 40px 8% 30px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2em;
+    margin: 0;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.websites-hero {
+    background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    padding: 80px 8% 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.websites-section {
+    padding: 80px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.website-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.website-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+}
+
+.website-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.website-card a img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.website-card:hover img {
+    transform: scale(1.05);
+}
+
+.website-card-content {
+    padding: 30px;
+}
+
+.website-card-content h3 {
+    color: var(--accent);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.website-card-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.tech-tag {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.website-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--primary-bg);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: var(--primary-bg);
+    transform: translateY(-2px);
+}
+
+.skills-section {
+    background-color: var(--secondary-bg);
+    padding: 80px 8%;
+}
+
+.skills-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    color: var(--accent);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    color: var(--text-primary);
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s ease;
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+.skill-category li:hover {
+    color: var(--accent);
+}
+
+/* Responsive Design for Websites Page */
+@media (max-width: 768px) {
+    .websites-hero {
+        padding: 60px 5% 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    
+    .websites-section {
+        padding: 60px 5%;
+    }
+    
+    .website-card-content {
+        padding: 20px;
+    }
+    
+    .website-links {
+        flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+        text-align: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    
+    .hero-content p {
+        font-size: 1em;
+    }
+    
+    .tech-stack {
+        justify-content: center;
+    }
 }
